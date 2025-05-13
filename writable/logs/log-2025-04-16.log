@@ -1,0 +1,55 @@
+CRITICAL - 2025-04-16 07:41:18 --> TypeError: App\Controllers\Pages::index(): Return value must be of type string, none returned
+[Method: GET, Route: pages/index]
+in APPPATH\Controllers\Pages.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-16 07:58:15 --> ErrorException: Undefined variable $id
+[Method: GET, Route: pages/form/ade-ganteng]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Pages.php(12): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-16 08:02:09 --> ErrorException: Undefined variable $getData
+[Method: GET, Route: pages/form/ade-ganteng]
+in APPPATH\Views\form.php on line 10.
+ 1 APPPATH\Views\form.php(10): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Pages.php(12): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-16 08:04:38 --> ErrorException: Undefined variable $id
+[Method: POST, Route: pages/kirim]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\Pages.php(19): view()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->kirim()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')

@@ -1,0 +1,64 @@
+CRITICAL - 2025-04-17 03:17:06 --> ErrorException: include(./Beranda.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pages/form/]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\form.php(2): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Pages.php(17): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-17 03:18:23 --> ErrorException: include(./Beranda.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pages/form/halo_aad]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\form.php(2): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Pages.php(17): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-17 03:20:42 --> ErrorException: include(./Beranda.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pages/form]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\form.php(2): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Pages.php(17): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-17 03:23:08 --> ErrorException: include(./Beranda.php): Failed to open stream: No such file or directory
+[Method: GET, Route: pages/form]
+in APPPATH\Views\form.php on line 2.
+ 1 APPPATH\Views\form.php(2): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Views\form.php(2): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\form.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render()
+ 6 APPPATH\Controllers\Pages.php(17): view()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->form()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')

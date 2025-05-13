@@ -1,0 +1,136 @@
+CRITICAL - 2025-04-23 01:59:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 01:59:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 01:59:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:00:25 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:01:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:02:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:03:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_v.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_v.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('form_v', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(12): view('form_v')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:12:14 --> ErrorException: Undefined variable $join
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\pages\Form_v.php on line 8.
+ 1 APPPATH\Views\pages\Form_v.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $join', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php', 8)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/form_v', [], true)
+ 5 APPPATH\Controllers\Mahasiswa.php(12): view('pages/form_v')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:13:29 --> ErrorException: Undefined variable $join
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\pages\Form_v.php on line 8.
+ 1 APPPATH\Views\pages\Form_v.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $join', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php', 8)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/form_v', [], true)
+ 5 APPPATH\Controllers\Mahasiswa.php(12): view('pages/form_v')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-04-23 02:52:35 --> ErrorException: Undefined variable $isset
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\pages\Form_v.php on line 7.
+ 1 APPPATH\Views\pages\Form_v.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $isset', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php', 7)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\pages\\Form_v.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('pages/form_v', [], true)
+ 5 APPPATH\Controllers\Mahasiswa.php(12): view('pages/form_v')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->getIndex()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')

@@ -1,0 +1,112 @@
+autoroute
+	setting di
+  	app/config/routing.php public bool $autoRoute = true;
+    app/config/feature.php public bool $autoRoutesImproved = true;
+
+Validation
+	bikin view dengan form
+	bikin rule
+  	contoh :
+    	$rules = [
+            'jualUraian' => ['label' => 'Uraian', 'rules' => 'required'],
+            'jualIsEkspor' => ['label' => 'Jenis Penjualan', 'rules' => 'required'],
+            'jualTbsKode' => ['label' => 'Jenis TBS', 'rules' => 'required'],
+            'jualHarga' => ['label' => 'Harga Satuan', 'rules' => 'required'],
+            'jualVolume' => ['label' => 'Volume', 'rules' => 'required'],
+      ];
+      
+  set configurasi rule
+  	$validation = service('validation');
+    $validation->setRules($rules);
+    
+  lakukan pengecekan
+  	if (!$validation->withRequest($this->request)->run()) {
+  		// masuk ke if arti validasi gagal
+      return;
+    }
+set base url 
+	di App/Config/App.php    public string $baseURL = 'http://localhost/pemweb/';
+
+Latihan membuat validasi
+	1. Bikin controller
+  2. bikin view (form_v.php)
+  		<form action="<?=base_url();?>mahasiswa/login" method="POST">
+          <input type="text"  name="username">
+          <button class="form-submit">Submit</button>
+      </form>
+      <?php
+          if (isset($pesan)) echo $pesan;
+      ?>
+  3. memanggil view di controller
+  		public function getIndex()
+      {
+          return view("form_v");
+      }
+      public function postLogin()
+      {
+
+          $rules = [
+              'username' => ['label' => 'Username', 'rules' => 'required']
+          ];
+          $validation = service('validation');
+          $validation->setRules($rules);
+          if (!$validation->withRequest($this->request)->run()) {
+              // masuk ke if arti validasi gagal
+              $data["pesan"]="validasi gagal";
+            	return view("form_v",$data);
+          }
+          echo "validasi sukses";
+      }
+
+penggunaan set_value
+	1. tambahkan protected $helpers = ['form']; didalam class
+  2. rubah view menjadi
+  		<form action="<?=base_url();?>mahasiswa/login" method="POST">
+          <input type="text"  name="username" value="<?= set_value('username') ?>">
+          <input type="text"  name="nama" value="<?= set_value('nama') ?>">
+          <button class="form-submit">Submit</button>
+      </form>
+      <?php
+          if (isset($pesan)) echo $pesan;
+      ?>
+
+penggunaan custom error pada rules
+	$rules = [
+            'username' => 
+                [
+                    'label' => 'Username', 
+                    'rules' => 'required|valid_email',
+                    'errors' => [
+                        'valid_email' => 'email salah format'
+                    ]
+                ],
+            'nama' => ['label' => 'Nama', 'rules' => 'required']
+  ];
+  
+penggunaan request
+	1. membaca request dari form post atau get
+  		$username = $this->request->getPost("username");
+      $nama = $this->request->getPost("nama");
+
+model
+	bikin di App/Models
+  	<?php
+
+    namespace App\Models;
+    use CodeIgniter\Model;
+
+    class Account_m extends Model
+    {
+        protected $table      = 'account';
+        protected $primaryKey = 'username';
+        protected $allowedFields = ['username', 'password'];
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
