@@ -1,0 +1,116 @@
+contoh model
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class Account_m extends Model
+{
+    protected $table      = 'account';
+    protected $primaryKey = 'username';
+    protected $allowedFields = ['username', 'password','nama'];
+} 
+
+cara akses model di controller
+public function getAccount(){
+        $accountModel = new \App\Models\Account_m();
+        $data = [
+            'username'  => 'darth',
+            'password'  => md5("admin"),
+            'nama'      => 'darth'
+        ];
+        echo "sebelum insert";
+        print_r($accountModel->findall());
+        $accountModel->insert($data);
+        echo "sesudah insert";
+        print_r($accountModel->findall());
+    }
+
+implementasi di controller doLogin
+public function postDologin()
+    {
+        $rules = [
+            'email' => ['label' => 'Email', 'rules' => 'required|valid_email'],
+            'password' => ['label' => 'Password', 'rules' => 'required']
+        ];
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            // masuk ke if arti validasi gagal
+            $data["pesan"]=validation_list_errors();
+            return view("login_v",$data);           
+        }
+        $email = $this->request->getPost("email");
+        $password = $this->request->getPost("password");
+        
+        $accountModel = new \App\Models\Account_m();
+        $user = $accountModel->find($email);
+        if ($user!=null){
+            if ($user["password"]==md5($password)){
+                echo "login berhasil";
+            } else {
+                echo "password salah";
+            }
+        } else {
+            echo "account tidak ditemukan";
+        }
+
+
+    }
+ 
+ mengecek dan membaca session
+ public function getAccount(){
+        $session = service('session');
+        if ($session->has('username')){
+            echo "session sudah ready, langsung redirect ke dashboard";
+            echo $session->username;
+        }
+    }
+ 
+ Destroy session
+ public function getDestroy(){
+        $session = service('session');
+        $session->destroy();
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,7 +1,7 @@
 <!-- Connection to css n js -->
-<link rel="stylesheet" href="/assets/libs/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/libs/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="<?= base_url('assets/libs/bootstrap/css/bootstrap.min.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
+<script src="<?= base_url('assets/libs/bootstrap/js/bootstrap.min.js') ?>"></script>
 
 <!-- navbar -->
 <?php echo $this->include('layouts/navbar'); ?>

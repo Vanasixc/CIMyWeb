@@ -41,4 +41,21 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/auth');
     }
+
+
+    public function getAccount()
+    {
+        $accountModel = new \App\Models\AuthDB();
+        $data = [
+            'id'       => 1,
+            'username'  => 'darth',
+            'password'  => md5("admin"),
+            'nama'      => 'darth'
+        ];
+        echo "sebelum insert";
+        print_r($accountModel->findall());
+        $accountModel->insert($data);
+        echo "sesudah insert";
+        print_r($accountModel->findall());
+    }
 }
