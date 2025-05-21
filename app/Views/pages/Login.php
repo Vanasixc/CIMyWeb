@@ -3,8 +3,14 @@
 <?= $this->section('content') ?>
 
 <?php if (session()->getFlashdata('alert')): ?>
-	<div class="alert alert-danger mt-5">
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
 		<?= session()->getFlashdata('alert') ?>
+	</div>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('success')): ?>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<?= session()->getFlashdata('success') ?>
 	</div>
 <?php endif; ?>
 
@@ -63,7 +69,8 @@
 								</div>
 							</div>
 						</form>
-						<p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+						<p class="text-center">Not a member? <a data-toggle="tab"
+								href="<?= base_url('auth/signup') ?>">Sign Up</a></p>
 					</div>
 				</div>
 			</div>

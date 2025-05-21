@@ -3,17 +3,18 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 <script src="<?= base_url('assets/libs/bootstrap/js/bootstrap.min.js') ?>"></script>
 
-<!-- navbar -->
-<?php echo $this->include('layouts/navbar'); ?>
 
 <!-- Head -->
 <?= $this->include(($head ?? '') == 'login' ? 'layouts/head-login' : 'layouts/head'); ?>
+
+<!-- navbar -->
+<?php echo $this->include('layouts/navbar'); ?>
 
 <!-- header -->
 <?php
 if ($title == 'Home') {
     echo $this->include('layouts/header-home');
-} elseif ($title == "Login") {
+} elseif ($title == "Login" || $title == "Register") {
 
 } else {
     echo $this->include('layouts/header');

@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\AuthDb;
+
 
 class Auth extends BaseController
 {
@@ -18,24 +20,38 @@ class Auth extends BaseController
     }
 
     public function postProcesslogin()
-    {
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-        
-        if ($username == 'admin' && $password == 'admin') {
-            $session = session();
-            $userData = [
-                'logged_in' => TRUE
-            ];
-            $session->set($userData);
-            return redirect()->to('pages/home');
-        } else {
-            $session = session();
-            $session->setFlashdata('alert', 'Username atau Password salah');
-            return redirect()->to('/auth');
-        }
+{
+    $authModel = new AuthDb();
+
+    $username = $this->request->getPost('username');
+    $password = md5($this->request->getPost('password'));
+
+    // Cek apakah username ada di database
+    $user = $authModel->where('username', $username)->first();
+
+    if (!$user) {
+        // Username tidak ditemukan
+        return redirect()->to('/auth')->with('alert', 'Akun tidak ditemukan. Silakan lakukan Sign Up.');
     }
-    
+
+    // Username ditemukan, sekarang cek password
+    if ($user['password'] !== $password) {
+        return redirect()->to('/auth')->with('alert', 'Password salah.');
+    }
+
+    // Login sukses, set session
+    $session = session();
+    $session->set([
+        'logged_in' => true,
+        'username'  => $user['username'],
+        'nama'      => $user['nama'],
+        'id'        => $user['id']
+    ]);
+
+    return redirect()->to('pages/home');
+}
+
+
     public function getLogout()
     {
         session()->destroy();
@@ -45,17 +61,51 @@ class Auth extends BaseController
 
     public function getAccount()
     {
-        $accountModel = new \App\Models\AuthDB();
+        $accountModel = new AuthDB();
         $data = [
-            'id'       => 1,
-            'username'  => 'darth',
-            'password'  => md5("admin"),
-            'nama'      => 'darth'
+            'id' => 1,
+            'username' => 'darth',
+            'password' => md5("admin"),
+            'nama' => 'darth'
         ];
         echo "sebelum insert";
         print_r($accountModel->findall());
         $accountModel->insert($data);
         echo "sesudah insert";
         print_r($accountModel->findall());
+    }
+
+    public function getSignup()
+    {
+        $pages = [
+            "title" => "Register",
+            "head" => "login",
+        ];
+
+        return view('pages/register', $pages);
+    }
+
+    public function postProcesssignup()
+    {
+        $authModel = new AuthDb();
+
+        $nama = $this->request->getPost('nama');
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        $rePassword = $this->request->getPost('re-password');
+
+        if ($password !== $rePassword) {
+            return redirect()->back()->withInput()->with('error', 'Password tidak sama!');
+        }
+
+        $data = [
+            'nama' => $nama,
+            'username' => $username,
+            'password' => md5($password),
+        ];
+
+        $authModel->insert($data);
+
+        return redirect()->to('/auth')->with('success', 'Registrasi berhasil!');
     }
 }

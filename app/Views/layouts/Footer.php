@@ -1,9 +1,9 @@
     <!-- footer -->
-    <div class="footer">
+    <footer class="bg-dark text-white text-center py-3">
         <i>Copyright &copy; My Personal Website. All Rights Reserved <br>
             This Website was Developed by <a ↪ href="">Adryan</a>
         </i>
-    </div>
+    </footer>
     <!-- end of footer -->
 </body>
 

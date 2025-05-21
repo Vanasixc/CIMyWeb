@@ -2,7 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Login 04</title>
+    <?php 
+        if($title == "Login"){
+            echo "<title>Login</title>";
+        }else if($title == "Register"){
+            echo "<title>Register</title>";
+        }
+    ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
