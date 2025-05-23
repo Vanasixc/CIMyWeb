@@ -26,20 +26,16 @@ class Auth extends BaseController
     $username = $this->request->getPost('username');
     $password = md5($this->request->getPost('password'));
 
-    // Cek apakah username ada di database
     $user = $authModel->where('username', $username)->first();
 
     if (!$user) {
-        // Username tidak ditemukan
         return redirect()->to('/auth')->with('alert', 'Akun tidak ditemukan. Silakan lakukan Sign Up.');
     }
 
-    // Username ditemukan, sekarang cek password
     if ($user['password'] !== $password) {
         return redirect()->to('/auth')->with('alert', 'Password salah.');
     }
 
-    // Login sukses, set session
     $session = session();
     $session->set([
         'logged_in' => true,

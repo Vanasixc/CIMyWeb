@@ -4,16 +4,6 @@ namespace App\Controllers;
 
 class Pages extends BaseController
 {
-    // public function form($id)
-    // {
-    //     $data = [
-    //         "id"=> $id,
-    //     ];
-    //     return view('form', $data);
-    // }
-
-    //method untuk memanggil pages
-
     public function getHome()
     {
         $pages = [

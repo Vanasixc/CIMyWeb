@@ -1,0 +1,15 @@
+    .dataTables_wrapper .row:first-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .dataTables_wrapper .row:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .dataTables_filter input {
+        min-width: 250px;
+    }

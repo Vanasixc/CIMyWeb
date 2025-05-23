@@ -1,0 +1,296 @@
+DEBUG - 2025-05-23 02:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 02:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-23 02:45:33 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'codeigniter', 3306, '', 0)
+#1 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\myWeb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\myWeb\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\myWeb\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\myWeb\app\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+#8 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\myWeb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\myWeb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\myWeb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\myWeb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\myWeb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\myWeb\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\myWeb\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\myWeb\app\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+#7 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\myWeb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\myWeb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\myWeb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\myWeb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-05-23 02:45:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/processlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+ERROR - 2025-05-23 02:45:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'codeigniter', 3306, '', 0)
+#1 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\myWeb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\myWeb\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\myWeb\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\myWeb\app\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+#8 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\myWeb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\myWeb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\myWeb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\myWeb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\myWeb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\myWeb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\myWeb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\myWeb\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\myWeb\system\BaseModel.php(713): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\myWeb\app\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+#7 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\myWeb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\myWeb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\myWeb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\myWeb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\myWeb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-05-23 02:45:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: auth/processlogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(30): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->postProcesslogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+DEBUG - 2025-05-23 02:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 02:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 02:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 02:46:06 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+INFO - 2025-05-23 02:46:37 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+INFO - 2025-05-23 02:59:13 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+INFO - 2025-05-23 03:07:04 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+INFO - 2025-05-23 03:08:14 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+INFO - 2025-05-23 03:11:29 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+DEBUG - 2025-05-23 03:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 03:54:33 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+DEBUG - 2025-05-23 03:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 03:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 03:55:22 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 03:56:17 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 03:56:26 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:09:46 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:10:00 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:10:04 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:10:55 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:12:18 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:14:52 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:15:04 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:16:19 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:16:24 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:16:28 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:18:32 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:18:39 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:18:47 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:18:56 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:19:43 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:19:56 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:21:51 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:22:02 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:22:08 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:31:17 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:32:33 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 05:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 05:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 05:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:32:46 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 05:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 05:34:32 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:35:20 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:35:41 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:35:50 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:36:02 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:47:36 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:48:03 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 05:51:07 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 06:01:01 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+INFO - 2025-05-23 06:02:09 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+DEBUG - 2025-05-23 12:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-23 12:22:08 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"},{"id":"12","username":"admin","password":"21232f297a57a5a743894a0e4a801fc3","nama":"ini atmin","created_at":"2025-05-23 11:55:15"}]
+CRITICAL - 2025-05-23 12:24:20 --> ErrorException: Undefined variable $name
+[Method: GET, Route: dashboard/welcome]
+in APPPATH\Views\layouts\dashboard\Welcome-dashboard.php on line 11.
+ 1 APPPATH\Views\layouts\dashboard\Welcome-dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $name', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/welcome-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(33): view('layouts/dashboard/welcome-dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getWelcome()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-05-23 12:31:45 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: dashboard/welcome]
+in APPPATH\Views\layouts\dashboard\Welcome-dashboard.php on line 11.
+ 1 APPPATH\Views\layouts\dashboard\Welcome-dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/welcome-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(30): view('layouts/dashboard/welcome-dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getWelcome()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+DEBUG - 2025-05-23 12:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 12:34:34 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard/account_setting]
+in APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php on line 44.
+ 1 APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/account_setting-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('layouts/dashboard/account_setting-dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getAccount_setting()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+DEBUG - 2025-05-23 12:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 12:36:49 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard/account_setting]
+in APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php on line 44.
+ 1 APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/account_setting-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(28): view('layouts/dashboard/account_setting-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getAccount_setting()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+DEBUG - 2025-05-23 12:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-23 12:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 12:38:57 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard/account_setting]
+in APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php on line 44.
+ 1 APPPATH\Views\layouts\dashboard\Account_setting-dashboard.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Account_setting-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/account_setting-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(28): view('layouts/dashboard/account_setting-dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getAccount_setting()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+DEBUG - 2025-05-23 12:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-23 13:24:50 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: dashboard/welcome]
+in APPPATH\Views\layouts\dashboard\Welcome-dashboard.php on line 11.
+ 1 APPPATH\Views\layouts\dashboard\Welcome-dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/welcome-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(35): view('layouts/dashboard/welcome-dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getWelcome()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')
+CRITICAL - 2025-05-23 13:47:06 --> ErrorException: Undefined variable $nama
+[Method: GET, Route: dashboard/welcome]
+in APPPATH\Views\layouts\dashboard\Welcome-dashboard.php on line 11.
+ 1 APPPATH\Views\layouts\dashboard\Welcome-dashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php', 11)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\myWeb\\app\\Views\\layouts\\dashboard\\Welcome-dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layouts/dashboard/welcome-dashboard', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(35): view('layouts/dashboard/welcome-dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->getWelcome()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\myWeb\\public\\index.php')

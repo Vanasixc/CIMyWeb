@@ -1,0 +1,6 @@
+INFO - 2025-05-22 06:03:34 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
+DEBUG - 2025-05-22 06:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-22 06:03:48 --> User data retrieved successfully: [{"id":"1","username":"darth","password":"21232f297a57a5a743894a0e4a801fc3","nama":"darth","created_at":"2025-05-14 10:48:50"},{"id":"8","username":"adryan","password":"f1c64becc7ff3b5681c8782891c9d6fd","nama":"adryan","created_at":"2025-05-21 08:59:43"}]
