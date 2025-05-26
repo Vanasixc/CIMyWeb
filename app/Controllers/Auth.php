@@ -16,42 +16,43 @@ class Auth extends BaseController
             "head" => "login",
         ];
 
-        return view('pages/login', $pages);
+        return view('home/pages/login', $pages);
     }
 
     public function postProcesslogin()
-{
-    $authModel = new AuthDb();
+    {
+        $authModel = new AuthDb();
 
-    $username = $this->request->getPost('username');
-    $password = md5($this->request->getPost('password'));
+        $username = $this->request->getPost('username');
+        $password = md5($this->request->getPost('password'));
 
-    $user = $authModel->where('username', $username)->first();
+        $user = $authModel->where('username', $username)->first();
 
-    if (!$user) {
-        return redirect()->to('/auth')->with('alert', 'Akun tidak ditemukan. Silakan lakukan Sign Up.');
+        if (!$user) {
+            return redirect()->to('/auth')->with('error', 'Akun tidak ditemukan. Silakan lakukan Sign Up.');
+        }
+
+        if ($user['password'] !== $password) {
+            return redirect()->to('/auth')->with('error', 'Password yang anda masukkan salah.');
+        }
+
+        $session = session();
+        $session->set([
+            'logged_in' => true,
+            'username' => $user['username'],
+            'nama' => $user['nama'],
+            'id' => $user['id']
+        ]);
+
+        return redirect()->to('pages/home')->with('message', 'Login berhasil! Selamat datang ' . $user['nama'] . '!');
     }
-
-    if ($user['password'] !== $password) {
-        return redirect()->to('/auth')->with('alert', 'Password salah.');
-    }
-
-    $session = session();
-    $session->set([
-        'logged_in' => true,
-        'username'  => $user['username'],
-        'nama'      => $user['nama'],
-        'id'        => $user['id']
-    ]);
-
-    return redirect()->to('pages/home');
-}
 
 
     public function getLogout()
     {
-        session()->destroy();
-        return redirect()->to('/auth');
+        $remove = ['id', 'nama', 'username', 'logged_in'];
+        session()->remove($remove);
+        return redirect()->to('/auth')->with('message', 'Anda telah berhasil logout.');
     }
 
 
@@ -78,7 +79,7 @@ class Auth extends BaseController
             "head" => "login",
         ];
 
-        return view('pages/register', $pages);
+        return view('home/pages/register', $pages);
     }
 
     public function postProcesssignup()
@@ -102,6 +103,6 @@ class Auth extends BaseController
 
         $authModel->insert($data);
 
-        return redirect()->to('/auth')->with('success', 'Registrasi berhasil!');
+        return redirect()->to('/auth')->with('message', 'Registrasi berhasil!');
     }
 }

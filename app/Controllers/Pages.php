@@ -11,7 +11,7 @@ class Pages extends BaseController
             "head" => "home",
         ];
 
-        return view('pages/home', $pages);
+        return view('home/pages/home', $pages);
     }
 
     public function getWelcome()
@@ -27,7 +27,7 @@ class Pages extends BaseController
             "description" => "Ini adalah halaman form",
         ];
 
-        return view('pages/form', $pages);
+        return view('home/pages/form', $pages);
     }
 
     //method function
@@ -46,12 +46,7 @@ class Pages extends BaseController
 
         $result = array_merge($pages, $data);
 
-        return view("pages/form", $result);
-    }
-
-    public function getCoba()
-    {
-        echo "<h1>Hello World</h1>";
+        return view("home/pages/form", $result);
     }
 }
 

@@ -1,0 +1,39 @@
+
+/* Class untuk dashboard/welcome */
+    .welcome-card {
+        display: flex;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        background-color: #ffffff;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-card-icon-area {
+        background-color: #A8D8B9;
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome-card-icon-area i {
+        font-size: 4rem;
+        color: #2F523A;
+    }
+
+    .welcome-card-content {
+        padding: 2.5rem;
+        width: 100%;
+    }
+
+    #tanggal-live {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #6c757d;
+    }
+
+    #jam-live {
+        font-size: 2.75rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
